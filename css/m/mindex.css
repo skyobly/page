@@ -1,0 +1,113 @@
+html,body{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+p,h1{
+	margin: 0;
+}
+#container{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	-webkit-transition-property:transform;
+	-webkit-transition-timing-function:linear;
+}
+ul li{
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	background-size: cover;
+	background-position:center;
+}
+li.intro{
+	/*background-color: #8bd23d;*/
+	background-image: url("/img/m/bg1.jpg");
+}
+li.intro .info{
+	-webkit-animation:index 600ms linear;
+}
+@-webkit-keyframes index{
+	from{-webkit-transform:translate3d(200px, 0px, 0px);opacity: 0;}
+	to{-webkit-transform:translate3d(0px, 0px, 0px);opacity: 1;}
+}
+li .outer{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+li .info{
+	position: absolute;
+	bottom: 20%;
+	left: 0;
+	width: 100%;
+	padding: 30px 0;
+	background-color: rgba(0,0,0,0.5);
+	transform:translate3d(200px, 0px, 0px);
+	-webkit-transform:translate3d(200px, 0px, 0px);
+	opacity: 0;
+	transition:all 500ms ease-out 400ms;
+	-webkit-transition:all 500ms ease-out 400ms;
+}
+li.active .info{
+	transform:translate3d(0px, 0px, 0px);
+	-webkit-transform:translate3d(0px, 0px, 0px);
+	opacity: 1;
+}
+
+li h1{
+	font-weight: normal;
+	margin-bottom: 20px;
+}
+li p{
+	margin-bottom: 15px;
+}
+li.edu{
+	background-image: url("/img/m/bg2.jpg");
+}
+li.skills{
+	background-image: url("/img/m/bg3.jpg");
+}
+li.skills,li.project p{
+	font-size: 16px;
+}
+li.project p{
+	text-align: left;
+	padding: 0 10px;
+}
+li.project span.t{
+	float: left;
+	width: 48px;
+}
+li.project span.d{
+	display: block;
+	overflow: hidden;
+}
+li.project.one{
+	background-image: url("/img/m/bg4.jpg");
+}
+li.project.two{
+	background-image: url("/img/m/bg8.jpg");
+}
+li.project.three{
+	background-image: url("/img/m/bg9.jpg");
+}
+li.project.four{
+	background-image: url("/img/m/bg10.jpg");
+}
+li.end{
+	background-image: url("/img/m/bg5.jpg");
+}
+
